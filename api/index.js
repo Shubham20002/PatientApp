@@ -4,10 +4,11 @@ const db=require('./config/mongodb');
 
 const app=express();
 app.use(express.urlencoded());
+app.use(express.json());
 
-app.get('/',(req,res)=>{
-    res.send('heelo from express server');
-})
+// app.get('/',(req,res)=>{
+//     res.send('heelo from express server');
+// })
 
 app.use('/',require('./router/patient.js'))
 app.listen(port,(err)=>{

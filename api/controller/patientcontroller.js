@@ -1,5 +1,6 @@
 const Patient = require("../model/patient")
 
+//api to add new Patient
 module.exports.addpatient=async(req,res)=>{
     try{
         console.log(req.body);
@@ -32,3 +33,23 @@ module.exports.addpatient=async(req,res)=>{
     }
 
 }
+
+//api to get all patients
+
+// module.exports.allpatients=async(req,res)=>{
+    
+//     try{
+//         const patients=await Patient.find({});
+//         res.status(200).json({
+//             message:"all user",
+//             data:patients
+//         })
+
+//     }
+//     catch(error){
+//         return res.status(500).json({
+//             mesage:"internal server error",
+            
+//          })
+//     }
+// }
